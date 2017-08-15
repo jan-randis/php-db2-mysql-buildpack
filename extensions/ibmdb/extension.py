@@ -171,7 +171,7 @@ class IBMDBInstaller(ExtensionHelper):
                 self._ctx[ibmdbExtn + '_DLFILE'],
                 True)
             self._runCmd(self._compilationEnv, self._ctx['BUILD_DIR'],
-                 ['ls -a /tmp/staged/app/.build_ibmdb_extension/php/ext/'], True)
+                 ['ls -a /tmp/staged/app/.build_ibmdb_extension/php/ext/ibm_db2/'], True)
             self._runCmd(self._compilationEnv, self._ctx['BUILD_DIR'],
                  ['cp', os.path.join(ibmdbExtnDownloadDir,  'ts', self._zendModuleApiNo, ibmdbExtn.lower() + '.so'),
                   self._phpExtnDpath])
