@@ -170,10 +170,11 @@ class IBMDBInstaller(ExtensionHelper):
                 ibmdbExtnDownloadDir,
                 self._ctx[ibmdbExtn + '_DLFILE'],
                 True)
+            #self._runCmd(self._compilationEnv, self._ctx['BUILD_DIR'],
+            #     ['tail /tmp/staged/app/.build_ibmdb_extension/php/ext/ibm_db2/20131226/'], True)
             self._runCmd(self._compilationEnv, self._ctx['BUILD_DIR'],
-                 ['tail /tmp/staged/app/.build_ibmdb_extension/php/ext/ibm_db2/ts/20131226/ibm_db2.so'], True)
-            self._runCmd(self._compilationEnv, self._ctx['BUILD_DIR'],
-                 ['cp', os.path.join(ibmdbExtnDownloadDir,  'ts', self._zendModuleApiNo, ibmdbExtn.lower() + '.so'),
+            #     ['cp', os.path.join(ibmdbExtnDownloadDir,  'ts', self._zendModuleApiNo, ibmdbExtn.lower() + '.so'),
+                 ['cp', os.path.join(ibmdbExtnDownloadDir,  '', self._zendModuleApiNo, ibmdbExtn.lower() + '.so'),
                   self._phpExtnDpath])
             self._logMsg ('Installed extension ' + ibmdbExtn)
         self._logMsg('-- Downloaded IBM DB Extensions ------------------')
